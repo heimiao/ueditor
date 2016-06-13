@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<title>完整demo</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable =no">
+
+		<script src="third-party/jquery-1.10.2.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript">
+			$(function() {
+				console.log($.trim($(".allCont").text().replace(/\n|&nbsp;/ig, "")));
+			 	$(".allCont").text($.trim($(".allCont").text().replace(/\n|&nbsp;/ig,"")).substring(0,24));
+				/*$.each($("img"), function() {
+					$(this).hide().after("&lt;..img..&gt;")
+				})*/
+			})
+		</script>
+	</head>
+
+	<body>
+
+		<div class="allCont">
+			<img src="img/test.jpg" /> 我是父亲div的内容
+			<span id="">
+						我是span标签
+					</span>
+			<p>我是p标签</p>
+			<div id="">
+				我是div标签
+				<img src="img/test.jpg" />
+				<a href="">我是a标签</a>
+			</div>
+		</div>
+	</body>
+
+</html>
